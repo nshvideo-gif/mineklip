@@ -1,3 +1,65 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<title>Mine Videoer</title>
+<style>
+    body {
+        margin: 0;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    h1 {
+        color: black;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .video-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 kolonner på desktop */
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+    }
+
+    @media (min-width: 900px) {
+        iframe {
+            height: 400px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .video-container {
+            grid-template-columns: repeat(2, 1fr); /* 2 kolonner på tablet */
+        }
+    }
+
+    @media (max-width: 600px) {
+        .video-container {
+            grid-template-columns: 1fr; /* 1 kolonne på mobil */
+        }
+        iframe {
+            height: 250px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<h1>Mine Videoer</h1>
+
 <div class="video-container">
     <!-- Video 1 -->
     <iframe 
@@ -35,3 +97,6 @@
         allowfullscreen>
     </iframe>
 </div>
+
+</body>
+</html>
